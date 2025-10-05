@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="1dp"
+    android:gravity="center_vertical"
+    android:minHeight="64dp">
+
+    <!-- 拖拽图标 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☰"
+        android:textSize="24sp"
+        android:textColor="#9E9E9E"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- 应用图标 -->
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- 应用名称 -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</LinearLayout>

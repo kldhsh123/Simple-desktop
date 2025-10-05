@@ -1,0 +1,26 @@
+# Android/Gradle构建输出
+.gradle/
+build/
+app/build/
+*.apk
+*.ap_
+*.aab
+
+# 本地配置文件（包含机器特定路径）
+local.properties
+
+# IDE文件
+.idea/
+*.iml
+.vscode/
+.vs/
+
+# NDK
+obj/
+x64/
+
+# 日志文件
+*.log
+
+# Gradle包装器JAR（可选，取决于团队规范）
+# gradle/wrapper/gradle-wrapper.jar

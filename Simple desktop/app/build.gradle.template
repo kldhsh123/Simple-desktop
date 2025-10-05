@@ -1,0 +1,68 @@
+apply plugin: 'com.android.$(ConfigurationType)'
+
+android {
+    compileSdkVersion $(AndroidAPILevelNumber)
+    buildToolsVersion '$(AndroidBuildToolsVersion)'
+
+    defaultConfig.with {
+        $(ApplicationId)
+        minSdkVersion 29
+        targetSdkVersion 34
+    }
+
+    compileOptions.with {
+        sourceCompatibility=JavaVersion.VERSION_1_8
+        targetCompatibility=JavaVersion.VERSION_1_8
+    }
+
+    // 启用ViewBinding
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'cpuArch'
+    productFlavors {
+        create("arm7") {
+            ndk.abiFilters.add("armeabi-v7a")
+        }
+        create("arm8") {
+            ndk.abiFilters.add("arm64-v8a")
+        }
+        create("x86") {
+            ndk.abiFilters.add("x86")
+        }
+        create("x86-64") {
+            ndk.abiFilters.add("x86_64")
+        }
+        create("all")
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    $(AarDependencies)
+
+    // AndroidX核心库
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // ViewPager2用于页面滑动
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // RecyclerView用于应用列表
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+
+    // Material Design组件
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Gson用于JSON数据存储
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- 现代化标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 壁纸设置卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="壁纸设置"
+                    android:textSize="16sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnWallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/change_wallpaper"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnResetWallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/reset_wallpaper"
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+            </LinearLayout>
+
+            <!-- 应用管理卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应用管理"
+                    android:textSize="16sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnAppManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/manage_apps"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnReorderApps"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/reorder_apps"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <!-- 布局配置卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="布局配置"
+                    android:textSize="16sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btnLayoutConfig"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/layout_config"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <!-- 关于应用卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关于"
+                    android:textSize="16sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_version"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvDeveloper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer_info"
+                    android:textSize="14sp"
+                    android:textColor="#616161"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvWebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer_website"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:autoLink="web"
+                    android:linksClickable="true"/>
+
+            </LinearLayout>
+
+            <!-- 返回桌面按钮 -->
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/back_to_home"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                android:elevation="4dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

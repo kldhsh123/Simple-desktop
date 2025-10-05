@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">简易桌面</string>
+
+    <!-- 时间相关 -->
+    <string name="am">上午</string>
+    <string name="pm">下午</string>
+    <string name="date_format">%d年%d月%d日</string>
+    <string name="weekday_monday">星期一</string>
+    <string name="weekday_tuesday">星期二</string>
+    <string name="weekday_wednesday">星期三</string>
+    <string name="weekday_thursday">星期四</string>
+    <string name="weekday_friday">星期五</string>
+    <string name="weekday_saturday">星期六</string>
+    <string name="weekday_sunday">星期日</string>
+
+    <!-- 设置页面 -->
+    <string name="settings_title">桌面设置</string>
+    <string name="change_wallpaper">更换壁纸</string>
+    <string name="manage_apps">管理应用</string>
+    <string name="layout_config">布局配置</string>
+    <string name="back_to_home">返回桌面</string>
+
+    <!-- 应用管理 -->
+    <string name="app_manager_title">应用管理</string>
+    <string name="app_on_desktop">已在桌面</string>
+    <string name="add_to_desktop">添加到桌面</string>
+    <string name="remove_from_desktop">从桌面移除</string>
+    <string name="desktop_full">桌面已满</string>
+
+    <!-- 布局配置 -->
+    <string name="layout_config_title">布局配置</string>
+    <string name="first_page_apps">首页应用数量</string>
+    <string name="normal_page_apps">普通页应用数量</string>
+    <string name="save_config">保存配置</string>
+    <string name="config_saved">配置已保存</string>
+
+    <!-- 提示信息 -->
+    <string name="long_press_hint">长按空白处进入设置</string>
+    <string name="launch_failed">应用启动失败</string>
+    <string name="wallpaper_set_success">壁纸设置成功</string>
+    <string name="wallpaper_set_failed">壁纸设置失败</string>
+    <string name="reset_wallpaper">恢复默认壁纸</string>
+    <string name="reset_wallpaper_success">已恢复默认壁纸</string>
+    <string name="reset_wallpaper_failed">恢复默认壁纸失败</string>
+
+    <!-- 空应用位 -->
+    <string name="empty_slot">空位</string>
+    <string name="click_to_add">点击添加应用</string>
+    <string name="click_to_add_app">添加应用</string>
+    <string name="tip_long_press_settings">点击右上角图标进入设置</string>
+
+    <!-- 关于信息 -->
+    <string name="app_version">版本 1.0\nGitHub: https://github.com/kldhsh123/Simple-desktop</string>
+    <string name="developer_info">开发者：开朗的火山河123 / 遥汐</string>
+    <string name="developer_website">https://kldhsh.top</string>
+
+    <!-- 应用顺序调整 -->
+    <string name="reorder_apps">调整应用顺序</string>
+    <string name="reorder_apps_title">调整应用顺序</string>
+    <string name="reorder_hint">长按应用图标拖动调整顺序</string>
+    <string name="reorder_save">保存顺序</string>
+    <string name="reorder_success">顺序已保存</string>
+</resources>

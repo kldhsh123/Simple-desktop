@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 页面指示器圆点drawable -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 圆形填充色（白色，将通过ColorFilter动态改变） -->
+    <solid android:color="@android:color/white"/>
+
+    <!-- 圆形尺寸（使用dimens中定义的indicator_size） -->
+    <size
+        android:width="@dimen/indicator_size"
+        android:height="@dimen/indicator_size"/>
+</shape>

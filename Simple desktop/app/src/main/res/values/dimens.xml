@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 时钟字体 -->
+    <dimen name="clock_text_size">80sp</dimen>
+    <dimen name="date_text_size">24sp</dimen>
+    <dimen name="ampm_text_size">28sp</dimen>
+
+    <!-- 应用图标和文字 -->
+    <dimen name="app_icon_size">96dp</dimen>
+    <dimen name="app_name_size">28sp</dimen>
+
+    <!-- 按钮文字 -->
+    <dimen name="button_text_size">32sp</dimen>
+
+    <!-- 标题文字 -->
+    <dimen name="title_text_size">36sp</dimen>
+
+    <!-- 普通文字 -->
+    <dimen name="normal_text_size">24sp</dimen>
+
+    <!-- 间距 -->
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+
+    <!-- 应用项间距 -->
+    <dimen name="app_item_padding">24dp</dimen>
+
+    <!-- 指示器 -->
+    <dimen name="indicator_size">12dp</dimen>
+    <dimen name="indicator_margin">8dp</dimen>
+
+    <!-- 最小点击区域 -->
+    <dimen name="min_touch_target">48dp</dimen>
+</resources>

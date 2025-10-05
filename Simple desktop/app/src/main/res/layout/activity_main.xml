@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- ViewPager2 - 页面容器 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/indicatorLayout"
+        android:clipChildren="false"
+        android:clipToPadding="false"/>
+
+    <!-- 页面指示器容器 -->
+    <LinearLayout
+        android:id="@+id/indicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_small"/>
+
+    <!-- 右上角设置按钮 -->
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/settings_button_bg"
+        android:src="@drawable/ic_settings"
+        android:contentDescription="@string/settings_title"
+        android:scaleType="centerInside"
+        android:padding="16dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/spacing_large">
+
+    <!-- 时间显示区域 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/spacing_medium">
+
+        <!-- 时钟 -->
+        <TextView
+            android:id="@+id/clockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00"
+            android:textSize="@dimen/clock_text_size"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-light"/>
+
+        <!-- 上午/下午 -->
+        <TextView
+            android:id="@+id/ampmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/am"
+            android:textSize="@dimen/ampm_text_size"
+            android:textColor="@color/text_secondary"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_gravity="top"/>
+    </LinearLayout>
+
+    <!-- 日期显示 -->
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024年1月1日 星期一"
+        android:textSize="@dimen/date_text_size"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="@dimen/spacing_large"/>
+
+    <!-- 应用网格 - 动态添加 -->
+    <GridLayout
+        android:id="@+id/appGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true"/>
+
+</LinearLayout>

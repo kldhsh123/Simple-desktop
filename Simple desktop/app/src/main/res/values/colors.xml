@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题色 - 简洁高对比 -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <!-- 背景色 -->
+    <color name="background_default">#424242</color>  <!-- 默认深灰色壁纸 -->
+    <color name="background_white">#FFFFFF</color>
+
+    <!-- 文字色 -->
+    <color name="text_primary">#FFFFFF</color>        <!-- 主要文字-白色 -->
+    <color name="text_secondary">#E0E0E0</color>      <!-- 次要文字-浅灰 -->
+    <color name="text_black">#212121</color>          <!-- 黑色文字 -->
+
+    <!-- 按钮色 -->
+    <color name="button_normal">#2196F3</color>
+    <color name="button_pressed">#1976D2</color>
+
+    <!-- 指示器 -->
+    <color name="indicator_active">#FFFFFF</color>
+    <color name="indicator_inactive">#80FFFFFF</color>
+
+    <!-- 分割线 -->
+    <color name="divider">#BDBDBD</color>
+</resources>
