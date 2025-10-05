@@ -18,12 +18,16 @@
 - **应用图标**：点击图标启动对应应用
 - **页面导航**：左右滑动切换多个页面
 - **设置按钮**：右上角齿轮图标（仅在首页显示），点击进入设置
+![Screenshot_2025-10-05-14-20-50-159_com Simple_desktop](https://github.com/user-attachments/assets/d759fb62-001a-4b6e-85d2-a3c509c183e0)
+
 
 ### 设置界面
 - **添加应用**：选择要在桌面显示的应用
 - **编辑应用**：修改已添加的应用
 - **更换壁纸**：从相册选择图片作为桌面壁纸（仅影响本应用）
 - **恢复默认壁纸**：一键恢复默认背景色
+![Screenshot_2025-10-05-14-21-01-691_com Simple_desktop](https://github.com/user-attachments/assets/8c7e6bd2-d19b-4d55-93d8-0aa16b05848f)
+
 
 ## 技术架构
 
