@@ -21,6 +21,11 @@ import java.io.InputStream;
  */
 public class SettingsActivity extends Activity {
     private static final int REQUEST_PICK_IMAGE = 1001;
+    private static final String PREF_SETTINGS_CLICK_COUNT = "settings_click_count";
+    private static final int MIN_CLICK_COUNT = 1;
+    private static final int MAX_CLICK_COUNT = 10;
+
+    private int currentClickCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +68,9 @@ public class SettingsActivity extends Activity {
         // 设置网站链接可点击
         TextView tvWebsite = findViewById(R.id.tvWebsite);
         tvWebsite.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // 初始化设置进入保护
+        initClickCountConfig();
     }
 
     /**
@@ -128,5 +136,43 @@ public class SettingsActivity extends Activity {
             e.printStackTrace();
             Toast.makeText(this, R.string.reset_wallpaper_failed, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    /**
+     * 初始化设置进入保护（点击次数配置）
+     */
+    private void initClickCountConfig() {
+        SharedPreferences prefs = getSharedPreferences("app_prefs", MODE_PRIVATE);
+        currentClickCount = prefs.getInt(PREF_SETTINGS_CLICK_COUNT, 1);
+
+        TextView tvClickCount = findViewById(R.id.tvClickCount);
+        tvClickCount.setText(String.valueOf(currentClickCount));
+
+        Button btnMinus = findViewById(R.id.btnClickCountMinus);
+        Button btnPlus = findViewById(R.id.btnClickCountPlus);
+
+        btnMinus.setOnClickListener(v -> {
+            if (currentClickCount > MIN_CLICK_COUNT) {
+                currentClickCount--;
+                tvClickCount.setText(String.valueOf(currentClickCount));
+                saveClickCount();
+            }
+        });
+
+        btnPlus.setOnClickListener(v -> {
+            if (currentClickCount < MAX_CLICK_COUNT) {
+                currentClickCount++;
+                tvClickCount.setText(String.valueOf(currentClickCount));
+                saveClickCount();
+            }
+        });
+    }
+
+    /**
+     * 保存点击次数设置
+     */
+    private void saveClickCount() {
+        SharedPreferences prefs = getSharedPreferences("app_prefs", MODE_PRIVATE);
+        prefs.edit().putInt(PREF_SETTINGS_CLICK_COUNT, currentClickCount).apply();
     }
 }

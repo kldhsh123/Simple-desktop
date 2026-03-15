@@ -51,9 +51,15 @@
     <string name="tip_long_press_settings">点击右上角图标进入设置</string>
 
     <!-- 关于信息 -->
-    <string name="app_version">版本 1.0\nGitHub: https://github.com/kldhsh123/Simple-desktop</string>
+    <string name="app_version">版本 1.1.0</string>
     <string name="developer_info">开发者：开朗的火山河123 / 遥汐</string>
-    <string name="developer_website">https://kldhsh.top</string>
+    <string name="developer_website">https://github.com/kldhsh123/Simple-desktop</string>
+
+    <!-- 设置进入保护 -->
+    <string name="settings_protection">设置进入保护</string>
+    <string name="settings_click_count_label">进入设置需点击次数</string>
+    <string name="settings_click_hint">还需点击 %d 次进入设置</string>
+    <string name="settings_click_count_desc">设置较大数值可防止误触进入设置页面</string>
 
     <!-- 应用顺序调整 -->
     <string name="reorder_apps">调整应用顺序</string>

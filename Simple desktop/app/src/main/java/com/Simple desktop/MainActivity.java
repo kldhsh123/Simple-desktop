@@ -38,6 +38,11 @@ public class MainActivity extends Activity {
     private Handler timeHandler;
     private Runnable timeUpdater;
 
+    // 设置按钮多次点击保护
+    private int settingsClickCounter = 0;
+    private long lastClickTime = 0;
+    private static final long CLICK_TIMEOUT_MS = 2000; // 2秒超时重置
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,19 +95,9 @@ public class MainActivity extends Activity {
         // 初始化指示器
         setupIndicators();
 
-        // 设置按钮点击事件（带震动反馈）
+        // 设置按钮点击事件（支持多次点击保护）
         ImageButton settingsButton = findViewById(R.id.settingsButton);
-        settingsButton.setOnClickListener(v -> {
-            // 震动反馈
-            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-            if (vibrator != null && vibrator.hasVibrator()) {
-                vibrator.vibrate(50); // 震动50毫秒
-            }
-
-            // 跳转到设置页面
-            Intent intent = new Intent(this, SettingsActivity.class);
-            startActivity(intent);
-        });
+        settingsButton.setOnClickListener(v -> handleSettingsClick());
     }
 
     /**
@@ -271,6 +266,54 @@ public class MainActivity extends Activity {
             // 使用默认背景
             rootLayout.setBackgroundColor(getResources().getColor(R.color.background_default, null));
         }
+    }
+
+    /**
+     * 处理设置按钮点击（支持多次点击保护）
+     */
+    private void handleSettingsClick() {
+        // 震动反馈
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (vibrator != null && vibrator.hasVibrator()) {
+            vibrator.vibrate(50);
+        }
+
+        // 读取所需点击次数
+        SharedPreferences prefs = getSharedPreferences("app_prefs", MODE_PRIVATE);
+        int requiredClicks = prefs.getInt("settings_click_count", 1);
+
+        // 仅需1次点击时直接进入设置
+        if (requiredClicks <= 1) {
+            openSettings();
+            return;
+        }
+
+        // 多次点击逻辑：超时则重置计数
+        long now = System.currentTimeMillis();
+        if (now - lastClickTime > CLICK_TIMEOUT_MS) {
+            settingsClickCounter = 0;
+        }
+        lastClickTime = now;
+        settingsClickCounter++;
+
+        if (settingsClickCounter >= requiredClicks) {
+            // 达到所需次数，进入设置
+            settingsClickCounter = 0;
+            openSettings();
+        } else {
+            // 提示剩余点击次数
+            int remaining = requiredClicks - settingsClickCounter;
+            String hint = String.format(getString(R.string.settings_click_hint), remaining);
+            Toast.makeText(this, hint, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 打开设置页面
+     */
+    private void openSettings() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
     /**

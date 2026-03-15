@@ -148,6 +148,79 @@
 
             </LinearLayout>
 
+            <!-- 设置进入保护卡片 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:elevation="2dp"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_protection"
+                    android:textSize="16sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_click_count_desc"
+                    android:textSize="13sp"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_click_count_label"
+                        android:textSize="15sp"
+                        android:textColor="#424242"/>
+
+                    <Button
+                        android:id="@+id/btnClickCountMinus"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="-"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:background="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/tvClickCount"
+                        android:layout_width="56dp"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="18sp"
+                        android:textColor="#212121"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/btnClickCountPlus"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:text="+"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
             <!-- 关于应用卡片 -->
             <LinearLayout
                 android:layout_width="match_parent"
